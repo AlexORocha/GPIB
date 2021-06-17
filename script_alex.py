@@ -6,7 +6,7 @@ from params.GPIB_commands import *
 try:
     # INICIALIZAÇÃO DO SETUP -------------------------------------------------
     rm = pyvisa.ResourceManager() # INICIA A INSTÂNCIA RM DO PYVISA
-    END = 'PORT' # ENDEREÇO DA CONEXÃO DO AGILENT 33220A
+    END = 'TCPIP::192.168.100.80::INSTR' # ENDEREÇO DA CONEXÃO DO AGILENT 33220A
     Agilent = rm.open_resource(END)
     # ------------------------------------------------------------------------
 except Exception as Error:
